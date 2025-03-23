@@ -30,6 +30,7 @@ async function handleLoadMore(event) {
       return;
     }
 
+    // update gallery
     const postsMarkup = updateGallery(photos.hits);
 
     refs.gallery.insertAdjacentHTML("beforeend", postsMarkup);
@@ -37,6 +38,7 @@ async function handleLoadMore(event) {
     // add Simplebox delay and alt
     simpleLight.refresh();
 
+    // smooth scrolling
     const image = document.querySelector(".gallery-image");
     const rect = image.getBoundingClientRect();
 
@@ -45,6 +47,7 @@ async function handleLoadMore(event) {
       behavior: "smooth", // Smooth scrolling effect
     });
 
+    // enable button
     loadMoreButton.enable();
     if (queryParams.page >= queryParams.maxPage) {
       iziToast.show({
