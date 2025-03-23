@@ -1,5 +1,3 @@
-import iziToast from "izitoast";
-
 // create a template
 function processImage({
   webformatURL,

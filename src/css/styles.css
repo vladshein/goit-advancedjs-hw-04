@@ -101,3 +101,17 @@ span {
 .loader.active {
   display: block;
 }
+
+.load-more {
+  margin: auto;
+  display: flex;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-more.is-hidden {
+  display: none;
+}
